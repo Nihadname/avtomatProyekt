@@ -8,15 +8,19 @@ namespace avtomatProyekt.Models
 {
     internal class Avtomat
     {
-     public   string Ad;
+  
        public int UmumiGulleSayi;
         public int ElimezdeQalanGulleSayi;
 
-        public Avtomat(string ad, int umumiGulleSayi)
+        public Avtomat( int umumiGulleSayi)
         {
-            Ad = ad;
+         
             UmumiGulleSayi = umumiGulleSayi;
             ElimezdeQalanGulleSayi = umumiGulleSayi;
+        }
+        public void SilahiMueyyenlesdiren()
+        {
+            
         }
         public void BirGulle()
         {
@@ -25,38 +29,49 @@ namespace avtomatProyekt.Models
                 Console.WriteLine("1 gulle atilir");
                 ElimezdeQalanGulleSayi--;
                 QalanGulleSayiniGostermek();
+                if (ElimezdeQalanGulleSayi == 0)
+                {
+                    ElimezdeQalanGulleSayi = UmumiGulleSayi;
+                    QalanGulleSayiniGostermek();
+                    System.Environment.Exit(0);
+
+
+                }
 
             }
-            else
-            {
-                GulleninDoldurulmasi();
-               
-               
-            }
             
+
         }
         public void AvtomatikEtas()
         {
             int HerAvtomatikGulleEtasSayisi = 3;
-            if (HerAvtomatikGulleEtasSayisi >= ElimezdeQalanGulleSayi)
+            if (ElimezdeQalanGulleSayi >=HerAvtomatikGulleEtasSayisi)
             {
                 Console.WriteLine("avtomatik etas baslamisdir");
                 ElimezdeQalanGulleSayi -= HerAvtomatikGulleEtasSayisi;
                 QalanGulleSayiniGostermek();
+                if (ElimezdeQalanGulleSayi == HerAvtomatikGulleEtasSayisi)
+                {
+                    ElimezdeQalanGulleSayi = UmumiGulleSayi;
+                    QalanGulleSayiniGostermek();
+                    System.Environment.Exit(0);
+
+
+                }
             }
-            else
-            {
-                Console.WriteLine("gullemiz qurtarib");
-            }
+           
         }
         public void GulleninDoldurulmasi()
         {
-            if (ElimezdeQalanGulleSayi == 0)
-            {
+           
+            
                 Console.WriteLine("gulle doldurulur");
                 ElimezdeQalanGulleSayi = UmumiGulleSayi;
-                QalanGulleSayiniGostermek() ;
-            }
+
+               
+                QalanGulleSayiniGostermek();
+            System.Environment.Exit(0);
+
         }
         public void QalanGulleSayiniGostermek()
         {
