@@ -10,7 +10,9 @@ namespace avtomatProyekt.Models
     {
         public void GirisEkraniHissesi()
         {
-            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor
+                 = ConsoleColor.Blue;
+
             Console.WriteLine("OYUNA BASLAYIRIQ");
             Console.WriteLine("9 GIRIS ");
             Console.WriteLine("q-QUIT");

@@ -10,6 +10,7 @@ namespace avtomatProyekt.Models
     {
         public string SilahNovleriTeyinEden()
         {
+            Avtomat avtomat2=new Avtomat();
             Console.WriteLine("5 - ak-47");
             Console.WriteLine("6 - m4");
             Console.WriteLine("7 - aug");
@@ -20,6 +21,7 @@ namespace avtomatProyekt.Models
             {
                 case ConsoleKey.D5:
                     return "ak-47";
+
        
                 case ConsoleKey.D6:
                     return "m4";

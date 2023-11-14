@@ -11,30 +11,32 @@ Avtomat avtomat1;
 switch (selectedGun) {
 
     case "ak-47":
-        avtomat1 = new Avtomat(35, selectedGun); // Pass 35 bullets for AK-47
+        avtomat1 = new Avtomat(35, selectedGun);
         break;
     case "m4":
-        avtomat1 = new Avtomat(50, selectedGun); // Specify M4 bullet count if different
+        avtomat1 = new Avtomat(50, selectedGun); 
         break;
     case "aug":
-        avtomat1 = new Avtomat(40, selectedGun); // Pass 40 bullets for AUG
+        avtomat1 = new Avtomat(40, selectedGun); 
         break;
     default:
-        Console.WriteLine("Unknown gun selected");
+        Console.WriteLine("bilinmeyen silah");
         return;
 
 }
 
-Console.BackgroundColor = ConsoleColor.Red;
+Console.ForegroundColor
+            = ConsoleColor.Blue;
+
 
 Console.WriteLine("oyun baslayacaq entere");
 if (Console.ReadKey().Key == ConsoleKey.Enter)
 {
    
 
-    Console.WriteLine("1-tek-tek ates");
-    Console.WriteLine("2-Avtomatik modda etas");
-    Console.WriteLine("3-daragin doldurulmasi");
+    Console.WriteLine("1-tek-tek ates ve sonrasi procesde ise a basin");
+    Console.WriteLine("2-Avtomatik modda etas bunda ise b");
+    //Console.WriteLine("3-daragin doldurulmasi");
     Console.WriteLine("4-eger oyunu bu hisseden cixmax istesez");
     ConsoleKeyInfo keyInfo = Console.ReadKey();
     bool ProgramdanCixma = false;
@@ -48,9 +50,7 @@ if (Console.ReadKey().Key == ConsoleKey.Enter)
             case ConsoleKey.D2:
                 avtomat1.AvtomatikEtas();
                 break;
-            case ConsoleKey.D3:
-                avtomat1.GulleninDoldurulmasi();
-                break;
+            
             case ConsoleKey.D4:
                 Console.WriteLine("cixma");
                 ProgramdanCixma = true;
@@ -58,7 +58,8 @@ if (Console.ReadKey().Key == ConsoleKey.Enter)
 
             default:
                 Console.WriteLine("oyun baslamaq ucun duzgun reqem secin");
-              
+                System.Environment.Exit(0);
+
                 break;
 
 

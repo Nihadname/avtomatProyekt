@@ -13,6 +13,7 @@ namespace avtomatProyekt.Models
        public int UmumiGulleSayi;
         public int ElimezdeQalanGulleSayi;
 
+        public Avtomat() { }
         public Avtomat( int umumiGulleSayi,string SilahinAdiMueyyenEden)
         {
          
@@ -40,6 +41,15 @@ namespace avtomatProyekt.Models
 
 
                 }
+                if(ElimezdeQalanGulleSayi==UmumiGulleSayi)
+                {
+                    Console.WriteLine("sizin kifayet qeder gulleniz var ");
+                }
+                if (ElimezdeQalanGulleSayi == 0)
+                {
+                    Console.WriteLine("avtomatik doldurma baslayir");
+                    GulleninDoldurulmasi();
+                }
 
             }
             
@@ -62,6 +72,15 @@ namespace avtomatProyekt.Models
                     QalanGulleSayiniGostermek();
                    // System.Environment.Exit(0);
                 }
+                if (ElimezdeQalanGulleSayi == UmumiGulleSayi)
+                {
+                    Console.WriteLine("sizin kifayet qeder gulleniz var ");
+                }
+                if ( ElimezdeQalanGulleSayi >= 1&&ElimezdeQalanGulleSayi<=3)
+                {
+                    Console.WriteLine("avtomatik doldurma baslayir");
+                    GulleninDoldurulmasi();
+                }
             }
            
         }
@@ -74,7 +93,7 @@ namespace avtomatProyekt.Models
 
                
                 QalanGulleSayiniGostermek();
-            System.Environment.Exit(0);
+            //System.Environment.Exit(0);
 
         }
         public void QalanGulleSayiniGostermek()
