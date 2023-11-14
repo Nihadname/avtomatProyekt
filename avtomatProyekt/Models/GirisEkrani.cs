@@ -12,7 +12,7 @@ namespace avtomatProyekt.Models
         {
             Console.BackgroundColor = ConsoleColor.White;
             Console.WriteLine("OYUNA BASLAYIRIQ");
-            Console.WriteLine("8 GIRIS ");
+            Console.WriteLine("9 GIRIS ");
             Console.WriteLine("q-QUIT");
             ConsoleKeyInfo keyInfo = Console.ReadKey();
             switch (keyInfo.Key) {

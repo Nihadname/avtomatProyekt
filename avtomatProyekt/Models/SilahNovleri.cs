@@ -8,7 +8,7 @@ namespace avtomatProyekt.Models
 {
     internal class SilahNovleri
     {
-        public void SilahNovleriTeyinEden()
+        public string SilahNovleriTeyinEden()
         {
             Console.WriteLine("5 - ak-47");
             Console.WriteLine("6 - m4");
@@ -19,17 +19,17 @@ namespace avtomatProyekt.Models
             switch (keyInfo.Key)
             {
                 case ConsoleKey.D5:
-                    Console.WriteLine("\nak-47");
-                    break;
+                    return "ak-47";
+       
                 case ConsoleKey.D6:
-                    Console.WriteLine("\nm4");
-                    break;
+                    return "m4";
+                   
                 case ConsoleKey.D7:
-                    Console.WriteLine("\naug");
-                    break;
+                    return "aug";
+                    
                 default:
-                    Console.WriteLine("\nInvalid choice. Please choose a valid option (5, 6, or 7).");
-                    break;
+                    return "bilinmeyen silah secdinis";
+                 
             }
         }
     }
