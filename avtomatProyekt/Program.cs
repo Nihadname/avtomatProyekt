@@ -46,6 +46,7 @@ if (Console.ReadKey().Key == ConsoleKey.Enter)
         {
             case ConsoleKey.D1:
                 avtomat1.BirGulle();
+
                 break;
             case ConsoleKey.D2:
                 avtomat1.AvtomatikEtas();
