@@ -5,6 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace avtomatProyekt.Models
 {
     internal class Avtomat
@@ -21,7 +22,7 @@ namespace avtomatProyekt.Models
             ElimezdeQalanGulleSayi = umumiGulleSayi;
             SilahinAdi = SilahinAdiMueyyenEden;
         }
-        
+     
         public void BirGulle()
         {
 
@@ -100,6 +101,6 @@ namespace avtomatProyekt.Models
         {
             Console.WriteLine($"{ElimezdeQalanGulleSayi}/{UmumiGulleSayi}");
         }
-
+       
     }
 }
