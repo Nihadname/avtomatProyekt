@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 
 namespace avtomatProyekt.Models
@@ -47,7 +42,7 @@ namespace avtomatProyekt.Models
                     Console.WriteLine("sizin kifayet qeder gulleniz var ");
                 }
                 if (ElimezdeQalanGulleSayi == 0)
-                {
+                {  
                     Console.WriteLine("avtomatik doldurma baslayir");
                     GulleninDoldurulmasi();
                 }
